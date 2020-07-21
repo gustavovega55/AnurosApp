@@ -8,8 +8,4 @@ router.get('/', function(req, res, next) {
  });
 });
 
-router.get('/hola', (req,res,next)=>{
-  res.render('home',{ saludo:"Hola mundo express Handle bars"})
-});
-
 module.exports = router;

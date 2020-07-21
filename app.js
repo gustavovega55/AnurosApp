@@ -17,6 +17,8 @@ mongoose.connect('mongodb+srv://usuario1:J75DYJgGNLx88DuT@anurosdbcluster-encqg.
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var anurosRouter = require('./routes/anuros'); //Api rest --Back end
+var frontAnurosRouter = require('./routes/front_anfibio');
 
 
 var app = express();
@@ -34,6 +36,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', indexRouter);
 app.get('/users', usersRouter);
+app.use('/anuros/api',anurosRouter);
+app.use('/front/anuros',frontAnurosRouter);
 
 
 // catch 404 and forward to error handler

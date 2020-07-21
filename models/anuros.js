@@ -6,8 +6,10 @@ let anurosSchema = Schema({
     id: Number,
     nombre: String,
     especie: String,
-    region: String,
-    imagen: String
+    sexo: String,
+    ubicacion: String,
+    imagen: String,
+    canto: String
 });
 
 module.exports = mongoose.model("Anuros", anurosSchema);
