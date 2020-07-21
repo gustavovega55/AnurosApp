@@ -53,7 +53,7 @@ router.delete('/anfibio', (req,res,next)=>{
 });
 
 router.delete('/anfibio:idAnfibio', (req,res,next)=>{
-  Marvel.findOneAndDelete({id: req.params.idAnfibio}, (err,datos)=>{
+  Anuros.findOneAndDelete({id: req.params.idAnfibio}, (err,datos)=>{
     if(err) res.status(404).json(err);
     else res.status(200).json(datos);
   });
